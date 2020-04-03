@@ -1,6 +1,8 @@
-
-security:
-  oauth2:
-    client:
-      client-id: first-client
-      client-secret: noonewilleverguess
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id:
+            client-secret:
