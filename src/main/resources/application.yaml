@@ -1,8 +1,23 @@
 spring:
+  datasource:
+    url: jdbc:postgresql://localhost/oauht_sosial_media
+    username: persada
+    password: persada
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
   security:
     oauth2:
       client:
         registration:
           google:
-            client-id:
-            client-secret:
+            client-id: 224334764563-b3dsamavc7ch7v297enpcegk5qodvead.apps.googleusercontent.com
+            client-secret: b-G91Wij-FnAUf5woCfxyj-T
+            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
